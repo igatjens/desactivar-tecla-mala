@@ -1,0 +1,55 @@
+Detectar tecla
+
+xev | grep keycode
+
+
+
+Desactivar tecla
+
+Script para desactivar
+
+! Disable Key
+keycode XX = NoSymbol
+
+Ejecutar script
+
+xmodmap key_script
+
+
+
+
+Script para reasignar
+
+! Remap Key
+keycode XX = NewFunction
+
+
+Ejecutar script
+
+xmodmap key_script
+
+
+
+
+Script para bash
+
+#!/bin/bash
+
+xmodmap ~/disable_key
+
+
+
+
+Ejecutar al iniciar sesión
+
+Poner en /etc/xdg/autostart o en ~/.config/autostart
+
+.desktop
+
+[Desktop Entry]
+Name=Fix Teclado
+Comment=Ejecutar fix-teclado sin terminal
+Exec=fix-teclado
+Terminal=false
+Type=Application
+Categories=Utility;
